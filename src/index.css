@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-system, system-ui, sans-serif;
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #FFF9F0;
+  color: #14332E;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-serif);
+}
+
+/* Subtle grain / texture for hero */
+.texture-dots {
+  background-image: radial-gradient(rgba(20, 51, 46, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Focus visible for a11y */
+:focus-visible {
+  outline: 3px solid #1B4D3E;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Hide scrollbar for horizontal pills */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
